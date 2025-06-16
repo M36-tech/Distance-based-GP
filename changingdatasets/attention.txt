@@ -1,0 +1,20 @@
+Lung:
+class: 2
+index: 3
+SRBCT:
+class: 2
+index: 3
+MLL:
+class: 'MLL'
+index: 2
+Lymphoma:
+class: 'FL'
+index:2
+-----------------------------------------------------------------------------------------------------
+datasets            feature                instance                    ir
+iris                                        105
+waveform                                    
+wine
+vehielel
+Thyriod     2
+vowel
