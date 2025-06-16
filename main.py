@@ -122,7 +122,14 @@ with open(resultspath + '.txt', 'a') as f:
                 change_data_testing = np.array(data_testing)
                 y = change_data_testing[:, -1]
                 output = list(map(lambda a: func(a[:-1]), data_testing))
-                auc = roc_auc_score(y,output)    
+                auc = roc_auc_score(y,output)   
+                '''
+                Note: The `roc_auc_score` function assumes that positive samples receive higher scores than negative ones.
+                However, the GPD method does not explicitly enforce this ordering, which may result in negative samples
+                having higher scores than positive ones. In such cases, the computed AUC might be less than 0.5.
+                To correct this, simply use: auc = 1 - auc
+                '''
+
                 if auc < 0.5:
                     auc = 1-auc         
                 pre_label_list = test_fsl(func,new_mindatas1,new_majdatas1,all_datas2)
