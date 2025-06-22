@@ -1,10 +1,16 @@
 # Distance-based-GP
 
-⚠️ **Work in Progress** ⚠️
 
-Thank you for your interest in this project! The code is currently being organized and prepared for release. Please stay tuned for upcoming updates and feel free to check back soon.
+
+The current code is largely complete and functional. We may continue to make improvements and optimizations in future versions.
 
 If you have any questions or suggestions, you are welcome to open an issue.
+
+## Installation
+
+```bash
+pip install -r requirements.txt
+```
 
 Replace the compile function in deap.gp with:
 ```python
@@ -45,7 +51,7 @@ def compile(expr, pset):
                             "operators. See the DEAP documentation for more information. "
                             "DEAP will now abort.").with_traceback(traceback)
 ```
-Run:
+## Run:
 ```bash
 python main.py
 ```
