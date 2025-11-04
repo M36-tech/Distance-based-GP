@@ -16,15 +16,9 @@ from scipy.stats import kstest
 from scipy import stats
 from eval_func import aucc,tpr_tnr
 from func_tools import *
-def g_mean(y_true,y_pred):
-    # tn,fp,fn,tp=confusion_matrix(y_true,y_pred).ravel
-    c=confusion_matrix(y_true,y_pred).flatten()
-    tn,fp,fn,tp = c[0],c[1],c[2],c[3]
-    sensitivity = tp/(tp+fn)
-    specificity = tn/(tn+fp)
-    gmean = math.sqrt(sensitivity*specificity)
-    return gmean
-resultspath = './result'
+from imblearn.metrics import geometric_mean_score as g_mean
+
+resultspath = './result1'
 
 dir_name = './datasets'
 
@@ -35,7 +29,7 @@ allpopf1 = []
 allpopgmean = []
 trainning_time_list = []
 all_size = []
-
+bw = list(range(1, 31))
 file_container = ['lapointe-2004-v2','colon','golub-1999-v1','leukemia','ionosphere','armstrong-2002-v1','shipp-2002-v1','dlbcl','gordon-2002','yeoh-2002-v1',"Lymphoma",'su-2001','tomlins-2006','lung','Dry_Bean_Dataset','yeast','letter-recognition']
 
 
@@ -70,7 +64,7 @@ with open(resultspath + '.txt', 'a') as f:
 
                 train_set,test_set,train_label,test_label = train_test_split(num_datas, num_label,
                                                                             train_size=0.7, test_size=0.3,
-                                                                            random_state=circulation, stratify=num_label)
+                                                                            random_state=bw[circulation], stratify=num_label)
 
                 all_datas1 = []
                 for index, b in enumerate(train_label):
@@ -114,6 +108,7 @@ with open(resultspath + '.txt', 'a') as f:
                 N = (len(mindatas1),len(majdatas1))
                 start = time.time()
                 new_mindatas1,new_majdatas1 = divide_dataset(mindatas1,majdatas1)
+                random.seed(circulation)
                 pop,hof,log, toolbox,tools,pset = single_objective(method,all_datas1,majdatas1,mindatas1,new_mindatas1,new_majdatas1, feat_num,minnum,majnum,all_datas2)
                 end = time.time()
                 trainning_time_list.append(end-start) 

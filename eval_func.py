@@ -5,6 +5,7 @@ from scipy.stats import rankdata
 from deap import gp
 import re
 from func_tools import get_mahalanobis,divide_two_subtrees,get_diff_class_mahalanobis,test_fsl
+from sklearn.preprocessing import MinMaxScaler, StandardScaler
 def count_terms(ind):
     num = 0
     for info in ind:
