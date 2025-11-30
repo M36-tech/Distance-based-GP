@@ -550,7 +550,7 @@ def m_dist(ind, toolbox, Cmin, Cmaj):
 #     g_mean = math.sqrt(tpr*tnr)
 #     return g_mean,
 
-def fsl_dist(ind, toolbox, Cmin, Cmaj,new_datamin,new_datamaj):
+def d_a(ind, toolbox, Cmin, Cmaj,new_datamin,new_datamaj):
     min_correct = 0
     maj_correct = 0
     func = toolbox.compile(expr=ind)

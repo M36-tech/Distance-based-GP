@@ -22,7 +22,7 @@ resultspath = './result1'
 
 dir_name = './datasets'
 
-methods = ['fsl_dist']
+methods = ['gpd']
 
 allpopauc = []
 allpopf1 = []
@@ -127,9 +127,9 @@ with open(resultspath + '.txt', 'a') as f:
 
                 if auc < 0.5:
                     auc = 1-auc         
-                pre_label_list = test_fsl(func,new_mindatas1,new_majdatas1,all_datas2)
+                pre_label_list = test_gpd(func,new_mindatas1,new_majdatas1,all_datas2)
 
-                f1score = f1_score(test_label,pre_label_list)
+                #f1score = f1_score(test_label,pre_label_list)
                 f1 = f1_score(test_label,pre_label_list)
                 # auc = aucc(hof[0], toolbox, mindatas2, majdatas2, N)[0]
                 gmean = g_mean(test_label,pre_label_list)

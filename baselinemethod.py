@@ -83,8 +83,8 @@ def single_objective(method,all_datas1,majdatas1,mindatas1,new_mindatas1,new_maj
         toolbox.register("evaluate", m_dist, toolbox = toolbox,Cmaj = majdatas1,Cmin= mindatas1)
     elif method == 'no_zero_aucw':
         toolbox.register("evaluate", no_zero_aucw, toolbox = toolbox,majdatas = majdatas1,mindatas= mindatas1)
-    elif method == 'fsl_dist':
-        toolbox.register("evaluate", fsl_dist, toolbox = toolbox,Cmin = mindatas1,Cmaj = majdatas1,new_datamin = new_mindatas1,new_datamaj = new_majdatas1)
+    elif method == 'gpd':
+        toolbox.register("evaluate", d_a, toolbox = toolbox,Cmin = mindatas1,Cmaj = majdatas1,new_datamin = new_mindatas1,new_datamaj = new_majdatas1)
 
 
     

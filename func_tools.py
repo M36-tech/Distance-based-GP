@@ -108,52 +108,7 @@ def divide_dataset(data_training_min,data_traing_maj):
     return new_min_data_list,new_maj_data_list
 
 
-# def test_fsl(func, Cmin, Cmaj,testdatalist):
-#     prelabel_list = []
-#     traning_data = Cmin+Cmaj
-#     test_lenth = len(testdatalist)
-#     new_test_list = select_n_random_items(traning_data, test_lenth)
-#     for new_data,test_data in zip(new_test_list,testdatalist):
-#         new_data.update({'pre':test_data})
-#     for data in new_test_list:
-#         minput = func(data['min'][:-1])
-#         majput = func(data['maj'][:-1])
-#         preput = func(data['pre'][:-1])
-#         if abs(minput - preput) >= abs(majput - preput):
-
-#             prelabel_list.append(0)
-            
-#         else:
-           
-#            prelabel_list.append(1)
-#     return prelabel_list
-# def test_fsl(func, Cmin, Cmaj,testdatalist):
-#     prelabel_list = []
-
-#     traning_data = Cmin+Cmaj
-#     test_lenth = len(testdatalist)
-#     # new_test_list = select_n_random_items(traning_data, test_lenth)
-#     # for new_data,test_data in zip(new_test_list,testdatalist):
-#     #     new_data.update({'pre':test_data})
-#     for data in testdatalist:
-#         min_num = 0
-#         maj_num = 0
-#         for i in traning_data:
-#             minput = func(i['min'][:-1])
-#             majput = func(i['maj'][:-1])
-#             preput = func(data[:-1])
-#             if abs(minput - preput) >= abs(majput - preput):
-#                 maj_num +=1
-
-
-            
-#             else:
-#                 min_num +=1
-#         if maj_num >= min_num:
-#             prelabel_list.append(0)
-#         else:
-#             prelabel_list.append(1)
-def test_fsl(func, Cmin, Cmaj,testdatalist):
+def test_gpd(func, Cmin, Cmaj,testdatalist):
     prelabel_list = []
     test_list = []
     # for index,data in enumerate(Cmin):
