@@ -18,7 +18,7 @@ from eval_func import aucc,tpr_tnr
 from func_tools import *
 from imblearn.metrics import geometric_mean_score as g_mean
 
-resultspath = './result1'
+resultspath = './result'
 
 dir_name = './datasets'
 

@@ -55,3 +55,7 @@ def compile(expr, pset):
 ```bash
 python main.py
 ```
+If you find this repository is useful for you, please cite our paper:
+```bibtex
+
+```

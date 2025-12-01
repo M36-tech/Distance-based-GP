@@ -4,7 +4,7 @@ from sklearn.metrics import roc_auc_score,average_precision_score
 from scipy.stats import rankdata
 from deap import gp
 import re
-from func_tools import get_mahalanobis,divide_two_subtrees,get_diff_class_mahalanobis,test_fsl
+from func_tools import get_mahalanobis,divide_two_subtrees,get_diff_class_mahalanobis,test_gpd
 from sklearn.preprocessing import MinMaxScaler, StandardScaler
 def count_terms(ind):
     num = 0
@@ -602,7 +602,7 @@ def pfc(population,toolbox,new_mindatas1,new_majdatas1,all_datas2):
     for ind in population:
         func_list.append(toolbox.compile(expr = ind))
     for func in func_list:
-        pre_label_list.append(np.array(test_fsl(func,new_mindatas1,new_majdatas1,all_datas2)))
+        pre_label_list.append(np.array(test_gpd(func,new_mindatas1,new_majdatas1,all_datas2)))
     for index,pre_label in enumerate(pre_label_list):
         pfc = 0
         y = pre_label_list[:]
