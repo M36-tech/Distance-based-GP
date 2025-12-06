@@ -1,10 +1,23 @@
-# Distance-based-GP
+<!-- # Distance-based-GP
+This repository contains the ​​Python implementation​​ of Distance-based-GP​ from the paper:
 
-
+​​"Developing distance-based Genetic Programming classifiers by reconstructing datasets for imbalanced binary classification"​
 
 The current code is largely complete and functional. We may continue to make improvements and optimizations in future versions.
 
-If you have any questions or suggestions, you are welcome to open an issue.
+If you have any questions or suggestions, you are welcome to open an issue. -->
+
+
+# Distance-based-GP
+
+This repository provides the Python implementation of **Distance-based-GP** proposed in the paper:
+
+> **"Developing distance-based Genetic Programming classifiers by reconstructing datasets for imbalanced binary classification"**
+
+The current code is largely complete and functional. We may continue to make improvements and optimizations in future versions.
+
+If you have any questions or suggestions, feel free to open an issue.
+
 
 ## Installation
 
@@ -57,5 +70,16 @@ python main.py
 ```
 If you find this repository is useful for you, please cite our paper:
 ```bibtex
-
+@article{MENG2025112825,
+title = {Developing distance-based Genetic Programming classifiers by reconstructing datasets for imbalanced binary classification},
+journal = {Pattern Recognition},
+pages = {112825},
+year = {2025},
+issn = {0031-3203},
+doi = {https://doi.org/10.1016/j.patcog.2025.112825},
+url = {https://www.sciencedirect.com/science/article/pii/S0031320325014888},
+author = {Wenyang Meng and Ying Li and Fan Zhang and Xiaoying Gao and Jianbin Ma},
+keywords = {Genetic Programming, Distance, Dataset Reconstructing, Imbalanced Binary Classification}
+}
 ```
+
