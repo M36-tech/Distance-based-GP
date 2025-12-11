@@ -70,16 +70,17 @@ python main.py
 ```
 If you find this repository is useful for you, please cite our paper:
 ```bibtex
-@article{MENG2025112825,
-title = {Developing distance-based Genetic Programming classifiers by reconstructing datasets for imbalanced binary classification},
+@article{MENG2026112825,
+title = {Developing distance-based genetic programming classifiers by reconstructing datasets for imbalanced binary classification},
 journal = {Pattern Recognition},
+volume = {173},
 pages = {112825},
-year = {2025},
+year = {2026},
 issn = {0031-3203},
 doi = {https://doi.org/10.1016/j.patcog.2025.112825},
 url = {https://www.sciencedirect.com/science/article/pii/S0031320325014888},
 author = {Wenyang Meng and Ying Li and Fan Zhang and Xiaoying Gao and Jianbin Ma},
-keywords = {Genetic Programming, Distance, Dataset Reconstructing, Imbalanced Binary Classification}
+keywords = {Genetic programming, Distance, Dataset reconstructing, Imbalanced binary classification}
 }
 ```
 
